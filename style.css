@@ -1,0 +1,39 @@
+body {
+	font-family: sans-serif;
+	background-color: rgb(243, 241, 241);
+}
+
+.wrapper {
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+.card {
+	background-color: white;
+	border-radius: 5px;
+	border-width: 1px;
+	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+	color: hsl(206, 17%, 28%);
+	font-size: 15px;
+	margin: 0 auto;
+	max-width: 800px;
+	padding: 30px 40px;
+}
+
+.card-body {
+	min-height: 100px;
+}
+
+.btn {
+	border: none;
+	background-color: blue;
+	border-radius: 20px;
+	color: hsl(0, 0%, 100%);
+	font-size: 20px;
+	line-height: 16px;
+	margin: 14px 14px 14px 14px;
+	padding: 10px 11px;
+	text-align: center;
+	cursor: pointer;
+}
