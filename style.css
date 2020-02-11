@@ -37,3 +37,20 @@ body {
 	text-align: center;
 	cursor: pointer;
 }
+.time {
+  flex-direction: row;
+  text-align: end;
+ 
+}
+.Start {
+ margin-top: auto;
+ text-align: center;
+ color: aqua;
+}
+
+.hide {
+	display: none;
+}
+.idhead{
+	text-align: end;
+}

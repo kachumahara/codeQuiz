@@ -1,9 +1,4 @@
-var StartButton = document.getElementById('start-btn');
-var questionContainer = document.getElementById('question-box');
-
-function StartGame() {}
-
-questions = [
+var questions = [
 	{
 		question: 'Commonly used data types DO NOT include',
 		answers: [
@@ -43,6 +38,7 @@ questions = [
 	{
 		question: 'A very useful tool used during development and debugging for printing content to the debugger is?',
 		answers: [
+			
 			{ text: 'Javascript', correct: false },
 			{ text: 'Terminal/bash', correct: false },
 			{ text: 'For loops', correct: false },
@@ -50,3 +46,70 @@ questions = [
 		],
 	},
 ];
+var timeEl = document.querySelector(".time");
+var mainEl = document.getElementById("main");
+var startButton = document.getElementById('start');
+var questionContainer = document.getElementById('question-box');
+var answerContainer = document.getElementById("answer-box")
+var instruction = document.getElementById("instruction-text")
+var questionIndex = 0
+var time = 60
+var timeInterval 
+
+startButton.addEventListener("click", function(){
+	//hide instruction 
+	instruction.setAttribute("class", "hide");
+
+	//show the first question
+	displayQuestion();
+
+	// start the timer
+
+	// answer question and move to next question
+
+
+})
+
+
+//function to display the Question and answer choices
+function displayQuestion () {
+questionContainer.textContent = questions[questionIndex].question
+answerContainer.children[0].textContent = questions[questionIndex].answers[0].text
+answerContainer.children[2].textContent = questions[questionIndex].answers[2].text
+answerContainer.children[3].textContent = questions[questionIndex].answers[3].text
+answerContainer.children[4].textContent = questions[questionIndex].answers[4].text
+	//console.log(questionContainer.children)
+
+//display question with question container query selector
+
+
+
+
+//loop through your answer choices with a for loop
+//and append those to your answer box
+
+
+}
+
+//function that checks the user answer choice
+function checkAnswer () {
+
+}
+
+//event listener to listen for when answer is submitted
+
+
+
+// function StartGame() {};
+function setTime() {
+	var timerInterval = setInterval(function() {
+	  secondsLeft--;
+	  timeEl.textContent = secondsLeft + " Coding Quiz Challenge.";
+  
+	  if(secondsLeft === 0) {
+		clearInterval(timerInterval);
+		sendMessage();
+	  }
+  
+	}, 1000);
+  }
