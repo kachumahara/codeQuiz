@@ -42,15 +42,23 @@ body {
   text-align: end;
  
 }
-.Start {
- margin-top: auto;
+#start {
  text-align: center;
- color: aqua;
+ 
 }
 
 .hide {
 	display: none;
 }
-.idhead{
+.idhead {
 	text-align: end;
+}
+#instruction-text {
+	text-align: center;
+	font-size: larger;
+}
+
+#answer-box {
+	margin: auto;
+	align-content:center;
 }
