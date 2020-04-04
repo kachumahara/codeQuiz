@@ -45,7 +45,7 @@ var questions = [
 		],
 	},
 ];
-var timeEl = document.querySelector('.time');
+var timeEl = document.getElementById('time');
 var mainEl = document.getElementById('main');
 var startButton = document.getElementById('start');
 var questionContainer = document.getElementById('question-box');
@@ -59,19 +59,21 @@ startButton.addEventListener('click', function() {
 	//hide instruction
 	instruction.setAttribute('class', 'hide');
 
-	
 	// start the timer
-
+setTime();
+displayQuestion();
 	// answer question and move to next question
 });
 
 //function to display the Question and answer choices
 function displayQuestion() {
 	questionContainer.textContent = questions[questionIndex].question;
-	questions[questionIndex].answers.forEach(function(answer, i){
+	questions[questionIndex].answers.forEach(function(answer, i) {
 		answerContainer.children[i].textContent = answer.text;
-		answerContainer.children[i].setAttribute("data-index", i);
-	})
+		answerContainer.children[i].setAttribute('data-index', i);
+	});
+
+	
 	// answerContainer.children[0].textContent = questions[questionIndex].answers[0].text;
 	// answerContainer.children[1].textContent = questions[questionIndex].answers[1].text;
 	// answerContainer.children[2].textContent = questions[questionIndex].answers[2].text;
@@ -88,24 +90,45 @@ function displayQuestion() {
 }
 
 //function that checks the user answer choice
-function checkAnswer() {}
+function checkAnswer(id, userAnswer) {
+	console.log(userAnswer)
+	questions[questionIndex].answers.forEach(function(answer, i) {
+		
+			if (userAnswer===answer.text && answer.correct===true){
+// show the user got the answer right
+			} else {
+				///got the question wrong
+			}
+		
+	
+	});
+	questionIndex++;
+	if (questionIndex < questions.length ) {
+		displayQuestion();
+	}
+	else {
+		//end the game
+	}
+}
 
 //event listener to listen for when answer is submitted
 
 // function StartGame() {};
 function setTime() {
 	var timerInterval = setInterval(function() {
-		secondsLeft--;
-		timeEl.textContent = secondsLeft + ' Coding Quiz Challenge.';
+		time--;
+		timeEl.textContent = time + ' Coding Quiz Challenge.';
 
-		if (secondsLeft === 0) {
+
+		if (time === 0) {
 			clearInterval(timerInterval);
 			sendMessage();
 		}
 	}, 1000);
 }
 
-answerContainer.addEventListener("click", function(e){
-	if(!e.target.matches("button")) return;
+answerContainer.addEventListener('click', function(e) {
+	if (!e.target.matches('button')) return;
+	checkAnswer(e.target.id, e.target.innerText);
 	console.log(e.target);
 });
