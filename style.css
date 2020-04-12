@@ -1,64 +1,57 @@
 body {
-	font-family: sans-serif;
-	background-color: rgb(243, 241, 241);
+  font-family: sans-serif;
+  background-color: rgb(243, 241, 241);
 }
 
 .wrapper {
-	padding-top: 30px;
-	padding-left: 20px;
-	padding-right: 20px;
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.card {
-	background-color: white;
-	border-radius: 5px;
-	border-width: 1px;
-	box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-	color: hsl(206, 17%, 28%);
-	font-size: 15px;
-	margin: 0 auto;
-	max-width: 800px;
-	padding: 30px 40px;
+li:hover {
+  background:rgb(108, 14, 196);
 }
 
-.card-body {
-	min-height: 100px;
+li {
+  width: 250px;
+  height: 30px;
 }
 
+.quiz-components {
+  padding-left: 20px;
+  padding-right: 20px; 
+}
 .btn {
-	border: none;
-	background-color: blue;
-	border-radius: 20px;
-	color: hsl(0, 0%, 100%);
-	font-size: 20px;
-	line-height: 16px;
-	margin: 14px 14px 14px 14px;
-	padding: 10px 11px;
-	text-align: center;
-	cursor: pointer;
+  border: none;
+  background-color: blue;
+  border-radius: 20px;
+  color: hsl(0, 0%, 100%);
+  font-size: 20px;
+  line-height: 16px;
+  margin: 14px 14px 14px 14px;
+  padding: 10px 11px;
+  text-align: center;
+  cursor: pointer;
 }
 .time {
   flex-direction: row;
   text-align: end;
- 
 }
 #start {
- text-align: center;
- 
+  text-align: center;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
-.idhead {
-	text-align: end;
-}
+
 #instruction-text {
-	text-align: center;
-	font-size: larger;
+  text-align: center;
+  font-size: larger;
 }
 
 #answer-box {
-	margin: auto;
-	align-content: center;
+  margin: auto;
+  align-content: center;
 }
