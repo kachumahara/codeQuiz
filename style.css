@@ -10,7 +10,7 @@ body {
 }
 
 li:hover {
-  background:rgb(108, 14, 196);
+  background: rgb(108, 14, 196);
 }
 
 li {
@@ -20,7 +20,7 @@ li {
 
 .quiz-components {
   padding-left: 20px;
-  padding-right: 20px; 
+  padding-right: 20px;
 }
 .btn {
   border: none;
