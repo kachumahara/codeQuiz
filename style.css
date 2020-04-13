@@ -1,6 +1,6 @@
 body {
   font-family: sans-serif;
-  background-color: rgb(243, 241, 241);
+  background-color: white;
 }
 
 .wrapper {
@@ -10,7 +10,7 @@ body {
 }
 
 li:hover {
-  background: rgb(108, 14, 196);
+  background: blue;
 }
 
 li {
@@ -26,7 +26,7 @@ li {
   border: none;
   background-color: blue;
   border-radius: 20px;
-  color: hsl(0, 0%, 100%);
+  color: white;
   font-size: 20px;
   line-height: 16px;
   margin: 14px 14px 14px 14px;

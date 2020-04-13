@@ -238,7 +238,6 @@ choicesList.addEventListener("click", chooseAnswer);
 addscorebtn.addEventListener("click", addToArray);
 clearbtn.addEventListener("click", clearScores);
 viewscores.addEventListener("click", viewAllScores);
-// startfromfinal.addEventListener("click", displayQuestions);
 
 getfromLocal ();
 
